@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAdES Signature with PKI Express</title>
+</head>
+<body>
+    <h2 class="ls-title">PAdES Signature with PKI Express</h2>
+    <form id="signForm" method="POST">
+        <!-- Hidden fields to pass data -->
+        <input type="hidden" name="certContentField" id="certContent" value="${certContent}">
+        <input type="hidden" name="certThumbField" id="certThumb" value="${certThumb}">
+        <div class="form-group">
+            <app-web-pki></app-web-pki>
+        </div>
+        <!-- Action buttons -->
+        <button id="signButton" (click)="signWithSelectedCert()"  type="button" class="btn btn-primary">Sign File</button>
+    </form>
+    
+</body>
+</html>

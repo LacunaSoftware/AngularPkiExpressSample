@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Select a Certificate</h1>
+  <select (change)="onCertificateChange($event)">
+    <option value="" selected disabled>Select a certificate</option>
+    <option *ngFor="let cert of certificates; let i = index" [value]="i">
+      {{ cert.subjectName }} ({{ cert.issuerName }})
+    </option>
+  </select>
+
+  <div *ngIf="selectedCertificate" class="certificate-details">
+    <h2>Certificate Details</h2>
+    <p><strong>Subject:</strong> {{ selectedCertificate.subjectName }}</p>
+    <p><strong>Issuer:</strong> {{ selectedCertificate.issuerName }}</p>
+    <p><strong>Valid From:</strong> {{ selectedCertificate.validityStart }}</p>
+    <p><strong>Valid To:</strong> {{ selectedCertificate.validityEnd }}</p>
+  </div>
+</div>

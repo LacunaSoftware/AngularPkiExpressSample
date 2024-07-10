@@ -14,4 +14,4 @@ You need to run two applications to use this sample correctly:
 4. Navigate to the `pkiExpress-NodeApp\output\` and open the signed file.
 
 In case any error occurs, it should appear on the browser console or the node app console. 
-For further assistance, please contact us at [suporte@lacunasoftware.com](suporte@lacunasoftware.com)
+For further assistance, please contact us at [suporte@lacunasoftware.com](mailto:suporte@lacunasoftware.com)

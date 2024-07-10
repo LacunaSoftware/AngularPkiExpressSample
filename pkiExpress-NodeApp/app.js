@@ -84,8 +84,20 @@ app.post('/finish-signature', async (req, res) => {
 		
 		// Generate path for output file and add the signature finisher.
 		const outputFileName = `${uuidv4()}.pdf`;
-		const outputFilePath = process.cwd() + `\\output\\${outputFileName}`;
-		signatureFinisher.outputFile = outputFilePath
+		const outputFilePath = process.cwd() + '\\output\\';
+		const fullPath = `${outputFilePath}${outputFileName}`
+		fs.access(outputFilePath, (err) => {
+			if (err) {
+				fs.mkdir(outputFilePath, (err) => {
+					if (err) {
+						console.error('Error when trying to create directory:', err);
+					} else {
+						console.log('Directory created with success');
+					}
+				});
+			}
+		});
+		signatureFinisher.outputFile = fullPath
 
 		// boolean to return certificate information after performing the signature
 		getCertInfo = true;

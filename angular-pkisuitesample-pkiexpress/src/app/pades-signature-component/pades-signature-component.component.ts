@@ -9,10 +9,9 @@ import { catchError, of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-pades-signature-component',
-  standalone: true,
   templateUrl: './pades-signature-component.component.html',
   imports: [WebPkiComponent],
-  styleUrl: './pades-signature-component.component.css',
+  styleUrl: './pades-signature-component.component.css'
 })
 export class PadesSignatureComponent {
   selectedCertContent: string = '';

@@ -5,7 +5,6 @@ import { PadesSignatureComponent } from './pades-signature-component/pades-signa
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [RouterOutlet, PadesSignatureComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

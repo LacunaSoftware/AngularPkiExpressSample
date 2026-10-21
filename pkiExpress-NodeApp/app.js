@@ -2,7 +2,6 @@ const express = require('express');
 const { PadesSignatureStarter, StandardSignaturePolicies, PkiExpressOperator, SignatureStarter, SignatureFinisher } = require('pki-express');
 const { PadesVisualElements } = require('./PadesVisualElements');
 const cors = require('cors');  // Import the CORS middleware
-const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
@@ -14,8 +13,8 @@ const port = 3000;
 // Use CORS middleware
 app.use(cors());
 
-// Use body-parser to parse JSON bodies
-app.use(bodyParser.json());
+// Use Express' built-in JSON body parser
+app.use(express.json());
 
 transferFile: string = "";
 

@@ -1,15 +1,13 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import LacunaWebPKI from 'web-pki';
 import { WebPkiService } from '../web-pki.service';
 import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-web-pki',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './web-pki.component.html',
-  styleUrl: './web-pki.component.css',
+  styleUrl: './web-pki.component.css'
 })
 export class WebPkiComponent {
   certificates: any[] = [];
